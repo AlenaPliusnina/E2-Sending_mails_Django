@@ -1,0 +1,7 @@
+/.idea
+.env
+/venv
+Procfile
+app.json
+runtime.txt
+
