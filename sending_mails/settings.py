@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# Добавтье ваш секркетный ключь здесь или создайте файл виртульного окружения (.env) и добавть его туда
+# Добавтье ваш секркетный ключь здесь или создайте файл переменных окружения (.env) и добавть его туда
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -127,7 +127,7 @@ STATIC_URL = '/static/'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 # для настройки EMAIL_HOST_USER и EMAIL_HOST_PASSWORD замените указанные значения здесть на вашу gmail почту и пароль, 
-# или создайте у себя файл виртуального огружения (.env) и добавьте ваш адрес email и пароль туда 
+# или создайте у себя файл переменных огружения (.env) и добавьте ваш адрес email и пароль туда 
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS = True
