@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<table class="table table-striped mt-5 ml-5" style="max-width: 90%;">
+  <thead class="bg-dark">
+    <tr style="text-align: center; color: white;">
+      <td>ID</td>
+      <td>Email title</td>
+      <td>Message text</td>
+      <td>Recipient email address</td>
+      <td>Seconds</td>
+      <td>Status</td>
+    </tr>
+  </thead>
+  <tbody>
+    {% for mail in mails %}
+      <tr style="text-align: center;">
+        <td>{{  mail.id }}</td>
+        <td>{{ mail.title }}</td>
+        <td>{{ mail.text }}</td>
+        <td>{{ mail.email }}</td>
+        <td>{{ mail.seconds }} s</td>
+        <td>
+          {% if mail.status == True %}
+            sent
+          {% else %}
+            wait
+          {% endif %}
+        </td>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

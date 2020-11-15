@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="d-flex justify-content-center mt-5">
+    <form method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="id_email">Recipient email address: </label>
+            {{ form.email }}
+        </div>
+        <div>
+            <label for="id_title">Email subject:</label>
+            {{ form.title }}
+        </div>
+        <div class="form-group mt-2">
+            <label for="id_text">Message text: </label>
+            <div id="id_text">{{ form.text }}</div>
+        </div>
+        <div class="form-group">
+            <label for="id_seconds">The number of seconds after witch the message will be sent:</label>
+            {{ form.seconds }}
+        </div>
+        <button type="submit" class="btn btn-success mb-2">Send email</button>
+    </form>
+</div>
+{% endblock %}
