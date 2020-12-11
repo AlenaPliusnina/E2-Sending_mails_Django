@@ -1,4 +1,4 @@
-# E2-Sending_mails_Django
+# Sending_emails_Django
 
 Описание: 
 
